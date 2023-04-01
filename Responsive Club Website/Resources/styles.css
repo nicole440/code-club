@@ -1,0 +1,248 @@
+/*GENERAL SETTINGS*/
+body {
+    background-image: url("https://images.unsplash.com/photo-1629757509637-7c99379d6d26?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    margin: 0 auto;
+  }
+  * {
+    box-sizing: border-box;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+    color: #00addf;
+  }
+  a:hover {
+    color: white;
+  }
+  h2, h3, h4, p, a, label {
+    font-family: 'Raleway', sans-serif;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 2em;
+  }
+  span {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  /*HEADER*/
+  .header-container {
+    position: relative;
+    text-align: center;
+    color: #000;
+  }
+  .header-img {
+    opacity: 0.3;
+    height: 400px;
+    width: 100%;
+  }
+  .header-text {
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 40px;
+    color: #fff;
+  }
+  h1 {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    opacity: 1;
+    color: #fff;
+  }
+
+/*ABOUT SECTION*/
+  .about-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    background-color: white;
+    opacity: 0.9;
+    margin: 30px auto;
+    padding: 15px;
+    min-width: 50%;
+    max-width: 400px;
+  }
+
+  /*MEMBERS*/
+  .members {
+    margin: 20px auto;
+  }
+  .member-photos {
+    clear: top;
+    display: inline-flex;
+    height: 600px;
+    margin: 25px;
+  }
+  .member-photos img {
+    padding: 0px;
+    margin: 25px;
+    border: white solid 15px;
+    border-bottom: white solid 45px;
+  }
+  /*
+  .flip-front:hover {
+    transform: rotateY(180deg);
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+*/
+  /*CALENDAR*/
+  .cal-container {
+    clear: right;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .calendar {
+    background-color: white;
+    opacity: 0.9;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .cal-header {
+    width: 100%;
+    position: relative;
+  }
+  .calendar h2 {
+    width: 100%;
+    text-transform: uppercase;
+  }
+  .calendar thead {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .calendar tbody {
+    color: #000;
+  }
+  .calendar tbody td:hover {
+    border: 2px solid #00addf;
+  }
+  .calendar td {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    display: inline-block;
+    height: 4em;
+    line-height: 4em;
+    text-align: center;
+    width: 4em;
+  }
+  .calendar .prev-month,
+  .calendar .next-month {
+    color: #cbd1d2;
+  }
+  .calendar .prev-month:hover,
+  .calendar .next-month:hover {
+    border: 2px solid #cbd1d2;
+  }
+  .current-day {
+    background: #00addf;
+    color: #f9f9f9;
+  }
+  .event {
+    cursor: pointer;
+    position: relative;
+  }
+  .event:after {
+    background: #00addf;
+    border-radius: 50%;
+    bottom: 0.5em;
+    display: block;
+    content: "";
+    height: 0.5em;
+    left: 50%;
+    margin: -0.25em 0 0 -0.25em;
+    position: absolute;
+    width: 0.5em;
+  }
+  .event.current-day:after {
+    background: #f9f9f9;
+  }
+  .btn-prev,
+  .btn-next {
+    border: 2px solid #cbd1d2;
+    border-radius: 50%;
+    color: #cbd1d2;
+    height: 2em;
+    font-size: 0.75em;
+    line-height: 2em;
+    margin: -1em;
+    position: absolute;
+    top: 50%;
+    width: 2em;
+  }
+  .btn-prev:hover,
+  .btn-next:hover {
+    background: #cbd1d2;
+    color: #f9f9f9;
+  }
+  .btn-prev {
+    left: 5em;
+  }
+  .btn-next {
+    right: 5em;
+  }
+  
+  /*FOOTER*/
+  footer {
+    color: white;
+    background-color: black;
+    opacity: 0.9;
+    min-height: 200px;
+    margin: 30px 0 0;
+  }
+  .contact {
+    float: left;
+    padding: 35px;
+  }
+  .mailing-list {
+    float: right;
+    padding: 35px;
+  }
+
+  @media only screen and (max-width: 480px) {
+
+    .header-container, footer {
+      width: 100%;
+      min-height: 200px;
+      overflow: visible;
+    }
+    .header-img {
+      max-height: 100%;
+    }
+    .header-text {
+      min-width: 450px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    h2, h3, h4, p, a {
+      font-size: 1.5em;
+    }
+    .about-text {
+      min-width: 85%;
+    }
+    .members {
+      width: 100%;
+      height: 300px;
+      overflow: visible;
+    }
+    .member-photos {
+      clear: both;
+      display: inline-flex;
+      max-height: 300px;
+      margin: 10px;
+    }
+    .member-photos img {
+      padding: 0px;
+      margin: 35px;
+      border: white solid 10px;
+      border-bottom: white solid 25px;
+    }
+    footer {
+      float:none;
+      display: grid;
+    }
+  }
